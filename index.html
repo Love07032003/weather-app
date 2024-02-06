@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <div class="wrapper">
+        <!-- HEADIND -->
+        <h1>WEATHER APP</h1>
+
+        <!-- TAB CONTAINER -->
+        <div class="tab-container">
+            <p class="tab" data-userWeather>Your Weather</p>
+            <p class="tab" data-searchWeather>Search Weather</p>
+        </div>
+
+        <!-- container -->
+        <div class="weather-container">
+
+            <!-- ist ui -->
+            <!-- grant location container -->
+            <div class="sub-container grant-location-container">
+                 <img src="./assets/location.png" alt="" width="80px" height="80px" loading="lazy">
+                 <p>Grant Location Access</p>
+                 <p> Allow Access to get weather Information</p>
+                 <button class="btn" data-grantAccess>Grant Access</button>
+            </div>
+
+            <!-- 2nd ui -->
+            <!-- search weather form -->
+            <form action="" class="form-container" data-searchForm>
+                <input placeholder="Search for City..." data-searchInput>
+                <button class="btn" search-btn>
+                    <img src="./assets/search.png" alt="" loading="lazy" width="20" height="20">
+                </button>
+            </form>
+
+            <!-- 3rd ui -->
+            <!-- loading screen -->
+            <div class="sub-container loading-container">
+                <img src="./assets/loading.gif" alt="" width="150px" height="150px" loading="lazy">
+                <p>loading</p>
+            </div>
+
+            <!-- 4th ui -->
+            <!--weather information  Ui  -->
+             <div class="sub-container user-info-conatiner">
+
+                <!-- city name and flag -->
+                <div class="name">
+                    <p data-cityName></p>
+                    <img data-countryIcon>
+                </div>
+
+                <!-- weather description(windy-haze) -->
+                <p data-weatherDesc></p>
+                <!-- weather icon -->
+                <img data-weatherIcon>
+                <!-- temperature -->
+                <p data-temp></p>
+
+                <div class="parameter-container">
+
+                    <!-- card 1 -->
+                    <div class="parameter">
+                        <img src="./assets/wind.png" loading="lazy">
+                        <p>windspeed</p>
+                        <p data-windSpeed></p>
+                    </div>
+
+                    <!-- card 2 -->
+                    <div class="parameter">
+                        <img src="./assets/humidity.png" alt="" loading="lazy">
+                        <p>humidity</p>
+                        <p data-humidity></p>
+                    </div>
+
+                    <!-- card 3 -->
+                    <div class="parameter">
+                        <img src="./assets/cloud.png" loading="lazy">
+                        <p>clouds</p>
+                        <p data-cloudiness></p>
+                    </div>
+                </div>
+
+                
+
+             </div>
+
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
